@@ -1,0 +1,160 @@
+
+*{ margin:0;
+    padding:0;
+}
+
+:root {
+  --cream: #fdf4e5;
+  --paper: #fffdf8;
+  --ink: #222b7e;
+  --muted: #5e5e78;
+  --coral: #3f69bd;
+  --coral-dark: #2b3d8f;
+  --butter: #f5cd6f;
+  --sage: #948274;
+  --sage-dark: #5d523f;
+  --line: #d1af86;
+}
+
+body{
+     font-family: "Roboto Slab", serif;
+     margin:0;
+     color: var(--ink);
+     background: var(--cream);
+     overflow-x: hidden;
+}
+
+ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+img { 
+    max-width: 100%; 
+    display: block; 
+}
+
+.container { 
+    width: min(1100px, calc(100% - 2rem)); 
+    margin: 0 auto;
+ }
+
+
+
+ /* ---------- Encabezado ---------- */
+.header-contavia {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(255, 250, 250);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 80px;
+}
+
+.logo-contavia {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-shrink: 0;
+}
+
+.logo-contavia img{
+    height: 120px;
+    width: auto;
+    max-width: 200px
+    object-fit: contain;
+    display: block;
+}
+
+/* Navegación y lista en horizontal */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-nav a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+
+.main-nav a:hover {
+  color: #2563eb; /* Color principal de TECHIY */
+}
+
+
+/* Botón de WhatsApp */
+.btn.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 9999px;
+  background-color: #2563eb; /* Ajusta al color de tu marca */
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+.btn.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+
+.btn.primary svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Ajuste básico para celulares */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    padding-block: 0.75rem;
+  }
+
+
+  .nav-xxx {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+
+  .nav-xxx ul {
+    gap: 0.85rem;
+    font-size: 0.9rem;
+  }
+}
